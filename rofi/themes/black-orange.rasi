@@ -1,0 +1,101 @@
+/**
+ * Rofi Black-Orange Theme
+ * Author: Your Name (or leave blank)
+ */
+
+configuration {
+    font: "Iosevka Nerd Font 12";
+    show-icons: true;
+    icon-theme: "Papirus";
+    display-drun: " ";
+    drun-display-format: "{name}";
+    modi: "drun,run,window";
+    sidebar-mode: false;
+    lines: 8;
+    columns: 1;
+    padding: 20;
+    width: 35%;
+    location: 0;
+    fixed-num-lines: true;
+    disable-history: false;
+    hide-scrollbar: true;
+    cycle: true;
+}
+
+* {
+    bg0: #1A1A1A;
+    bg1: #252525;
+    bg2: #333333;
+    orange: #FF8C00;
+    orange-light: #FFA54F;
+    fg0: #E0E0E0;
+    fg1: #FFFFFF;
+    fg2: #CCCCCC;
+    alert: #FF5555;
+}
+
+window {
+    background-color: @bg0;
+    border: 2px;
+    border-color: @orange;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [inputbar, listview];
+}
+
+inputbar {
+    background-color: @bg1;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 0 0 10px 0;
+    children: [textbox-prompt-colon, entry];
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: " ";
+    text-color: @orange;
+    font: "Fira Code 14";
+}
+
+entry {
+    background-color: inherit;
+    text-color: @fg1;
+    placeholder: "Search...";
+    placeholder-color: @fg2;
+}
+
+listview {
+    background-color: @bg1;
+    border-radius: 4px;
+    padding: 4px;
+    dynamic: true;
+    scrollbar: false;
+}
+
+element {
+    background-color: transparent;
+    text-color: @fg0;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+element selected {
+    background-color: @orange;
+    text-color: @bg0;
+    border: none;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+}
+
+element-icon {
+    size: 24px;
+    background-color: transparent;
+}
