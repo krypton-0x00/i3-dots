@@ -191,6 +191,15 @@ return {
         d = { "<cmd>Gitsigns diffthis<cr>", "🔄 Diff This" },
         D = { "<cmd>lua require('gitsigns').diffthis('~')<cr>", "🔄 Diff This ~" },
       },
+
+      -- Snippets
+      ["<leader>n"] = {
+        name = "📝 Snippets",
+        l = { "<cmd>lua require('luasnip').jump(1)<cr>", "➡️ Next Placeholder" },
+        h = { "<cmd>lua require('luasnip').jump(-1)<cr>", "⬅️ Previous Placeholder" },
+        c = { "<cmd>lua require('luasnip').change_choice(1)<cr>", "🔄 Change Choice" },
+        e = { "<cmd>lua require('luasnip').expand()<cr>", "📝 Expand Snippet" },
+      },
     })
 
     -- Register non-leader keybindings

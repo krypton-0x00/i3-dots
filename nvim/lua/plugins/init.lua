@@ -452,6 +452,9 @@ require("lazy").setup({
   -- Completion
   { import = "plugins.cmp" },
 
+  -- Code Snippets
+  { import = "plugins.snippets" },
+
   -- LSP
   { import = "plugins.lsp" },
 
